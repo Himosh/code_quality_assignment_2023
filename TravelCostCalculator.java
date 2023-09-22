@@ -67,7 +67,6 @@ public class TravelCostCalculator {
             (" + String.join(", ", availableCurrencies) + "): ");
             String selectedCurrency = reader.readLine();
             
-            
             double flightCost = fuelCost.getOrDefault(destination, 0.0);
             double hotelCost = accomadationCost.getOrDefault(destination, 0.0);
 
@@ -77,7 +76,6 @@ public class TravelCostCalculator {
             String[] availableCurrencies = exchangeCost.keySet().toArray(new String[0]);
           
             double finalPriceLocalCurrency = totalCostUsd * b.get(selectedCurrency);
-
 
             System.out.printf("Flight cost: USD %.2f\n", flightCost);
             System.out.printf("Hotel cost (%d days): USD %.2f\n", stayDuration, hotelCost);
